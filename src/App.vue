@@ -1,31 +1,47 @@
 <template>
-  <div id="app">
+  <div id="app" class="container">
+    <img alt="Vue logo" src="./assets/logo.png" class="logo">
     <nav>
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/todo">Todo</router-link>
     </nav>
     <router-view/>
   </div>
 </template>
 
 <style lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
+
+*{
+  box-sizing: border-box;
+  font-family: "Madimi One", sans-serif;
+}
+.container{
+  max-width: 600px;
+  margin: 0 auto;
+}
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Madimi One", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
+}
+.logo{
+  display: block;
+  margin: 20px auto;
+  height: 200px;
 }
 
 nav {
   padding: 30px;
+  font-size: 30px;
 
   a {
     font-weight: bold;
-    color: #2c3e50;
-
+    color: #673F69;
+    text-decoration: none;
     &.router-link-exact-active {
-      color: #42b983;
+      color: #D74B76;
     }
   }
 }
